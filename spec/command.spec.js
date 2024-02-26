@@ -10,3 +10,21 @@ describe("Command class", function() {
   });
 
 });
+
+describe("Command class", function() {
+
+  it("constructor sets command type", function() {
+    let testCommand = new Command("MODE_CHANGE","LOW_POWER")
+    expect(testCommand.commandType).toEqual("MODE_CHANGE","LOW_POWER")
+  });
+
+});
+
+describe("Command class", function() {
+
+  it("constructor sets a value passed in as the 2nd argument", function() {
+    let testCommand = new Command('MOVE', 12000);
+    expect(testCommand.value).toEqual(12000)
+  });
+
+});
