@@ -30,7 +30,8 @@ class Rover {
             this.results.push({completed: false})
          }
       });
-      return {message: this.message.name,  results: this.results}
+      return {message: this.message.name,
+              results: this.results}
 }
 
 }
