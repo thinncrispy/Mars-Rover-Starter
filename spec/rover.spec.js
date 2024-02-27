@@ -60,10 +60,10 @@ describe("Rover class", function() {
   test("responds correctly to the mode change command", function(){
     let message = new Message(
       "Status Check Test",[
-        new Command("STATUS_CHECK")
+        new Command("MODE_CHANGE","LOW_POWER")
       ]);
       let result = rover.receiveMessage(message);
-      expect(result.results[0].completed).toBeTruthy();
+      expect(result.results[0].roverStatus.mode).toBe("LOW_POWER")
   });
 
   //TEST 12 “responds with a false completed value when attempting to move in LOW_POWER mode”

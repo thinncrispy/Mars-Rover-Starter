@@ -18,7 +18,11 @@ class Rover {
          } else if(element.commandType === 'MODE_CHANGE') {
             
             this.mode = element.value;
-            this.results.push({completed: true});
+            this.results.push({completed: true,
+                           roverStatus: {
+                              mode: this.mode
+                           }
+            });
 
          } else if(element.commandType === 'STATUS_CHECK'){
             this.results.push({completed: true, 
